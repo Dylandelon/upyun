@@ -1,0 +1,27 @@
+server:
+  port: 2020
+
+spring:
+  application:
+    name: yun-config
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+  profiles:
+     active: native
+  security:
+    user:
+      password: xxpay
+
+
+#http://localhost:${server.port}/eureka/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2000/eureka/
+
+logging:
+  file: ./log/yun-config.log
+
