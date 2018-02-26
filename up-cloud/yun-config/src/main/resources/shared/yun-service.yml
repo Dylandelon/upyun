@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
+    type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.102.104:3306/xxpaydb?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
     username: root
@@ -25,11 +25,11 @@ spring:
   profiles:
      active: prod
 
-  activemq:
-    broker-url: failover:(tcp://192.168.102.104:61616?wireFormat.maxInactivityDuration=0)
-    in-memory: true
-    pool:
-      enabled: true # 如果此处设置为true，需要加activemq-pool依赖包，否则会自动配置失败，报JmsMessagingTemplate注入失败
+  rabbitmq:
+    host: 192.168.205.126
+    username: cxpay
+    password: cxpay2017
+    port: 5672
 
 logging:
   file: ./log/yun-service.log

@@ -2,7 +2,7 @@ package com.up.yungateway.gateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import org.xxpay.common.util.MyLog;
+//import org.xxpay.common.util.MyLog;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class AccessFilter extends ZuulFilter {
 
-    private static final MyLog _log = MyLog.getLog(ZuulFilter.class);
+//    private static final MyLog _log = MyLog.getLog(ZuulFilter.class);
 
     @Override
     public String filterType() {
@@ -36,7 +36,7 @@ public class AccessFilter extends ZuulFilter {
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        _log.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
+//        _log.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
         Object accessToken = request.getParameter("accessToken");
         /*if(accessToken == null) {
             log.warn("access token is empty");

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>你吃饭了吗</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>吃了</h1>
+<p th:text="'1: ' + ${welcome.content1}" />
+<p th:text="'2: ' + ${welcome.content2}" />
+<p th:text="'3: ' + ${welcome.content3}" />
+<p th:text="'4: ' + ${welcome.content4}" />
+<p th:text="'5: ' + ${welcome.content5}" />
+
+<a href="/greeting">Submit another message</a>
+</body>
+</html>
