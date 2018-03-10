@@ -17,6 +17,7 @@ public class indexController {
         welcome.setContent3("框架部署完成");
         welcome.setContent4("页面选定");
         welcome.setContent5("布局以及内容进行中");
+        welcome.setContent6("这内容还没出来框架先要升级一个版本，好尴尬");
         model.addAttribute("welcome", welcome);
         return "welcome";
     }
